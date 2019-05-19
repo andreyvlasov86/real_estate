@@ -1,0 +1,20 @@
+.layout{
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 9999;
+}
+.spinnerLayout{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
