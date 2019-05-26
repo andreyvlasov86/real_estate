@@ -4,12 +4,12 @@ from api import views
 
 
 router = routers.DefaultRouter()
-#router.register(r'data', views.UploadFileDataViewSet, base_name='UploadFileData')
+router.register(r'announcements', views.AnnouncementViewSet, base_name='Announcements')
 #router.register(r'get_data', views.CollectData.as_view())
 
 
 urlpatterns = [
-    #url('^swagger', schema_view),
+    url('', include(router.urls)),
     #url('^get_data', views.CollectData.as_view()),
     #url('^del_data', views.ClearFilesData.as_view()),
     #url('^ping_status/(?P<process_id>\d+)/$', views.PingFilesData.as_view())

@@ -20,7 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     #url(r"^dj_admin/", admin.site.urls),
     url(r'^api/v1/auth/', include('oauth2_provider.urls', namespace='oauth2_provider')),
-
     path('api/v1/', include('api.urls'))
 
 ]

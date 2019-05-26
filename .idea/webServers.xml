@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="71f2503a-2d03-46bf-859c-ebc53abf9c05" name="DEV" url="http://104.248.27.0">
+        <fileTransfer host="104.248.27.0" port="22" rootFolder="/home/ubuntu/real_estate" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
