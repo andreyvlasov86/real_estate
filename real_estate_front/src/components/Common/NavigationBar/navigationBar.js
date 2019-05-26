@@ -24,25 +24,29 @@ class Navigation extends Component {
 				  <SideNav.Toggle />
 				  <SideNav.Nav defaultSelected={loc}>
 				  {
-					links.map(item =>
-					  <NavItem key={item.id} eventKey={item.path}>
-						<NavIcon>
-							<i className={item.icon} style={{ fontSize: '1.5em' }} />
-						</NavIcon>
-						<NavText>
-						  {item.name}
-						</NavText>
-						{
-						  item.subitems.map(subitem =>
-							<NavItem key={subitem.id} eventKey={subitem.path}>
-							  <NavText>
-								{subitem.name}
-							  </NavText>
-							</NavItem>
-						  )
+					links.map(item => {
+						if (item.show) {
+							return (
+								<NavItem key={item.id} eventKey={item.path}>
+									<NavIcon>
+										<i className={item.icon} style={{ fontSize: '1.5em' }} />
+									</NavIcon>
+									<NavText>
+									  {item.name}
+									</NavText>
+									{
+									  item.subitems.map(subitem =>
+										<NavItem key={subitem.id} eventKey={subitem.path}>
+										  <NavText>
+											{subitem.name}
+										  </NavText>
+										</NavItem>
+									  )
+									}
+								</NavItem>
+							)
 						}
-					  </NavItem>
-				   )
+					})
 				  }
 				  </SideNav.Nav>
 				</SideNav>
